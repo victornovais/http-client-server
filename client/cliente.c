@@ -30,19 +30,16 @@ int main(int argc, char *argv[]) {
     while(1) {
         // Função responsável por estabelecer a conexão com o server pelo socket
         Status = connect(cliente_socket,(struct sockaddr *)&server, sizeof(server)); 
-        printf("Conectando!\n");
         if(Status < 0)  {  
             close(cliente_socket);        
             exit(1);
         } 
-        printf("Escreva a requisicao!\n");
         scanf("%s%s%s", type, path, protocol);
         do{}while(getchar() != '\n');
         do{}while(getchar() != '\n');
         
         sprintf(full_request,"%s %s %s \r\n",type,path,protocol);       
 
-        printf("Enviando!\n");
         Status = send(cliente_socket,full_request,strlen(full_request),0);  // Envia requisicao
         if(Status < 0) {
             perror("Erro ao enviar!\n");
