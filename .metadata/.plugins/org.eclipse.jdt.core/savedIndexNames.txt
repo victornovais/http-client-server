@@ -1,0 +1,11 @@
+INDEX VERSION 1.126+/home/victornovais/Desktop/http-client-server/.metadata/.plugins/org.eclipse.jdt.core
+1427733583.index
+4076621122.index
+3304472620.index
+685434401.index
+251786704.index
+3699516528.index
+1991254354.index
+1273944110.index
+2198343082.index
+3065865789.index

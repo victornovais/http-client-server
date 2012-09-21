@@ -1,0 +1,34 @@
+package treatment;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class TreatRequest {
+	public ArrayList<String> splitWords(String request) {
+
+		ArrayList<String> list = new ArrayList<String>();
+		// Separando cada elemento da requisicao
+		String[] breakedList = request.split(" ");
+
+		// Adicionando-os à uma lista, para facilitar o tratamento
+		for (String word : breakedList) {
+			list.add(word);
+		}
+		return list;
+	}
+	
+	public String readPage(String filepath) throws IOException {
+		BufferedReader inputStream = new BufferedReader(new FileReader(filepath));
+		StringBuilder html = new StringBuilder();
+		
+		while(inputStream.readLine() != null) {
+			html.append(inputStream.readLine());
+			html.append("\n");
+		}
+		System.out.println(html); 
+		return html.toString();
+	}
+
+}
