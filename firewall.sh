@@ -1,7 +1,5 @@
 #!/bin/bash
-#http://www.tccamargo.com/linux/tutoriais/iptables.html
-#http://pt.scribd.com/doc/51992595/Tutorial-Iptables
-#http://wiki.ubuntu-br.org/Iptables
+
 #limpando tabelas
 iptables -F
 iptables -X
