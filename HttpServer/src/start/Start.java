@@ -9,9 +9,7 @@ public class Start {
 		HttpServer newRequest = new HttpServer();
 
 		while (true) {
-			Thread newClient = new Thread(newRequest);
-			newClient.start();
-			newClient.join();
+		newRequest.runServer();
 		}
 	}
 }

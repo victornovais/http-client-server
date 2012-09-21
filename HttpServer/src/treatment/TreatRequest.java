@@ -1,5 +1,8 @@
 package treatment;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class TreatRequest {
@@ -15,5 +18,16 @@ public class TreatRequest {
 		}
 		return list;
 	}
-
+	
+	public static String read(String filepath) throws IOException {
+		BufferedReader inputStream = new BufferedReader(new FileReader(filepath));
+		StringBuilder html = new StringBuilder();
+		
+		while(inputStream.ready()) {
+			html.append(inputStream.readLine());
+			html.append("\n");
+		}
+		inputStream.close();
+		return html.toString();
+	}
 }
